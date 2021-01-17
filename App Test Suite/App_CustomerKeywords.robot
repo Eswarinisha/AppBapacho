@@ -171,13 +171,66 @@ Choose Product Category
     Capture Page Screenshot  
     
 View product information
+    Page Should Contain Element    ${ProductName}     
+   
     Click Element    ${ProductName} 
     Sleep    2    
     Capture Page Screenshot  
+    
+#CART
 
 Add to Cart
     Click Element    ${AddtoCart}
+    Sleep    2 
+    Click Element    ${AddtoCart}
+    Sleep    2 
+    Click Element    ${AddtoCart}
     Sleep    2    
     Capture Page Screenshot  
+    Click Element    ${Close_Button}
+    Capture Page Screenshot 
+    
 
+#BASKET
+
+Go to Basket and Place Order
+
+    Click Element    ${YourBasket}
+    Sleep    2    
+    Capture Page Screenshot 
+    Click Element    ${Order_Button}
+    Sleep    2    
+    Capture Page Screenshot 
+    
+#CHECKOUT
+
+Choose Date & Time
+   Click Element     ${Choose_Date_textbox}     
+    Click Element     ${Choose a date}
+     Sleep    2      
+    Capture Page Screenshot 
+    Click Element    ${Choose_Time_textbox}
+    Sleep    2      
+    Capture Page Screenshot 
+    Click Element    ${Choose a time}
+    
+GuestUser_fill_checkoutform
+    Input Text    ${Firstname}    Eswari Nisha
+    Input Text    ${Lastname}     Balakrishnan
+    Input Text    ${emailaddress}    nisha@inqadigital.com
+    Input Text    ${phone}    +31612809787
+    Capture Page Screenshot    
+    Swipe               1.5   2176.4  1.5  1900  1000
+    
+Choose CashPay
+    Capture Page Screenshot
+    Click Element    ${Cashpay_radioBtn}
+    Sleep    2    
+    Capture Page Screenshot
+    Page Should Contain Element    ${Proceed to Payment}  
+    Click Element    ${Proceed to Payment} 
+    Sleep    5
+    Page Should Contain Text    Order complete    
+    Capture Page Screenshot     
+    
     

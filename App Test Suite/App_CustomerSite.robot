@@ -71,8 +71,12 @@ CASF008TC003	#Guest User must be able to add products to cart
     Type Address and Search
     View Delivery
     Select a bekery from Near me list
+    Choose Product Category
     View product information
     Add to Cart
     
-
+#CASF008TC004	#Guest User must be able to checkout and place order
+    Go to Basket and Place Order
+    GuestUser_fill_checkoutform
+    Choose CashPay
     

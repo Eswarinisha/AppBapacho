@@ -58,7 +58,28 @@ ${First bakery from Result_CZ}      Nisha's Automated Bakery001
 ${Mark as favorite}    xpath=//android.view.View[@text='MARK AS FAVORITE']
 ${Product Category}    xpath=//android.view.View[@text='Beverages']
 ${ProductName}    xpath=//android.view.View[@text='Apple Juice']
-${AddtoCart}    xpath=//android.view.View[contains(@resource-id,'addToCartRow')]//android.view.View[@index=2]//android.view.View[@index=0]//[android.view.View[@index=2]//[android.view.View[@index=0]
+${AddtoCart}    xpath=//android.view.View[contains(@resource-id,'addToCartRow')]//android.view.View[@index=2]//android.view.View[@index=2]
+${Close_Button}    xpath=//android.webkit.WebView[@text='Bapacho']//android.view.View[@index=0]//android.view.View[@index=0]//android.view.View[@index=0]//android.view.View[@index=0]//android.view.View[@index=0]
+
+#BASKET
+
+${YourBasket}    xpath=//android.view.View[contains(@resource-id,'checkoutButtonHolder')]//android.view.View[@index=0]
+${Order_Button}    xpath=//android.widget.Button[contains(@resource-id,'orderNowButton')]
+
+#CHECKOUT PAGE
+
+${Choose_Date_textbox}     xpath=//android.widget.Spinner[@text='Today']
+${Choose a date}    xpath=//android.widget.CheckedTextView[@index=1]
+${Choose_Time_textbox}     xpath=//android.widget.Spinner[@index=0]
+${Choose a time}    xpath=//android.widget.CheckedTextView[@index=1]
+${Firstname}    xpath=//android.widget.EditText[contains(@resource-id,'firstname')]
+${Lastname}     xpath=//android.widget.EditText[contains(@resource-id,'lastname')]
+${emailaddress}    xpath=//android.widget.EditText[contains(@resource-id,'email')]
+${phone}    xpath=//android.widget.EditText[contains(@resource-id,'phone')]
+
+${Cashpay_radioBtn}    xpath=//android.widget.RadioButton[contains(@resource-id,'paymentMethod6')]
+${Proceed to Payment}     xpath=//android.view.View[@index=1]//android.view.View[contains(@resource-id,'paymentButtonHolder')]//android.widget.Button[@text='Proceed to payment']
+
 
 
 
