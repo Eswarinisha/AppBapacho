@@ -1,8 +1,8 @@
 *** Settings ***
 Library    AppiumLibrary
 
-Resource    AppVariables.robot
-Resource    App_CustomerKeywords.robot
+Resource    AndroidApp_Variables.robot
+Resource    AndroidApp_CustomerKeywords.robot
 
 
 ***Keyword***

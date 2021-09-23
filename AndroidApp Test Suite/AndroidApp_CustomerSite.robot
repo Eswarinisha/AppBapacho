@@ -2,9 +2,9 @@
 Library    AppiumLibrary
 
 
-Resource    AppVariables.robot
-Resource    App_CustomerKeywords.robot
-Resource    Basic Regression Suite Keywords.robot
+Resource    AndroidApp_Variables.robot
+Resource    AndroidApp_CustomerKeywords.robot
+Resource    AndroidApp_Basic Regression Suite Keywords.robot
 
 
 *** Test Cases ***
@@ -93,7 +93,7 @@ CASF008TC003	#Guest User must be able to add products to cart
     View product information
     Add to Cart
     
-#CASF008TC004	#Guest User must be able to checkout and place order
+CASF008TC004	#Guest User must be able to checkout and place order
     Go to Basket and Place Order
     GuestUser_fill_checkoutform
     Choose CashPay
@@ -325,7 +325,7 @@ CASF036TC001	#User must be able to click and view Privacy Statement
     Go to profile
     Privacy Policy
     
-CASF014TC001	#User can be able to Logout
+CASF037TC001	#User can be able to Logout
     Open App and Skip intro
     Choose Staging
     Off Push Notification

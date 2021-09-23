@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>App_Bapacho</name>
+	<name>App_Bapacho_Android</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.robotframework.ide.eclipse.main.plugin.robotNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>libspecs/AppiumLibrary.py</name>
-			<type>1</type>
-			<location>C:/Users/Nisha/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/AppiumLibrary/keywords/_element.py</location>
-		</link>
-	</linkedResources>
 </projectDescription>

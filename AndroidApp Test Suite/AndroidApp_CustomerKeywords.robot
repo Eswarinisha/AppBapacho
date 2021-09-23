@@ -1,39 +1,43 @@
 *** Settings ***
 Library    AppiumLibrary
 
-Resource    AppVariables.robot
+Resource    AndroidApp_Variables.robot
 
 
 ***Keyword***
 
 #INTRO
-
-Open Bapacho app
-    Open Application    	http://localhost:4723/wd/hub 	    platformName=Android    deviceName=emulator-5554    appPackage=nl.designs.bapacho    appActivity=nl.designs.bapacho.MainActivity      automationName=UiAutomator2
-    Sleep   10   
+Open Bapacho app     
+    Open Application    	 http://localhost:4723/wd/hub 	    platformName=Android    deviceName=emulator-5554    appPackage=nl.designs.bapacho    appActivity=nl.designs.bapacho.MainActivity      automationName=UiAutomator2
+    Sleep   10  
     Capture Page Screenshot 
 
 
 Open App and Read intro
       
     Open Bapacho app   
-    Wait Until Page Contains Element    ${IntroNext_Button_${Language}}
+    Wait Until Page Contains Element    ${IntroNext_Button1_${Language}}
+    Sleep    2
     Capture Page Screenshot
-    Click Element    ${IntroNext_Button_${Language}}  
-    Wait Until Page Contains Element    ${IntroNext_Button_${Language}}
+    Click Element    ${IntroNext_Button1_${Language}}  
+    Wait Until Page Contains Element    ${IntroNext_Button2_${Language}}
+    Sleep    2
     Capture Page Screenshot
-    Click Element    ${IntroNext_Button_${Language}}  
-    Wait Until Page Contains Element    ${IntroNext_Button_${Language}}
-    Click Element    ${IntroNext_Button_${Language}}  
-    Wait Until Page Contains Element     ${IntroStartUsingBapacho_Button_${Language}}  
+    Click Element    ${IntroNext_Button2_${Language}}  
+    Wait Until Page Contains Element    ${IntroNext_Button3_${Language}}
+    Sleep    2
+    Click Element    ${IntroNext_Button3_${Language}}  
+    Wait Until Page Contains Element     ${IntroStartUsingBapacho_Button_${Language}}
+    Sleep    2  
     Capture Page Screenshot  
-    Click Element     ${IntroStartUsingBapacho_Button_${Language}}  
+    Click Element     ${IntroStartUsingBapacho_Button_${Language}} 
     Wait Until Page Contains Element    ${ChooseStaging}     
+    Sleep    2
     Capture Page Screenshot
 
 Open App and Skip intro
     Open Bapacho app  
-    Wait Until Page Contains Element    ${IntroSkip_Button_${Language}}
+    Wait Until Page Contains Element    ${IntroSkip_Button_${Language}} 
     Capture Page Screenshot
     Click Element    ${IntroSkip_Button_${Language}} 
     Wait Until Page Contains Element    ${ChooseStaging}  

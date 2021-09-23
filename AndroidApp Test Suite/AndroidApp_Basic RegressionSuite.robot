@@ -1,8 +1,8 @@
 *** Settings ***
 Library    AppiumLibrary
 
-Resource    AppVariables.robot
-Resource    Basic Regression Suite Keywords.robot
+Resource    AndroidApp_Variables.robot
+Resource    AndroidApp_Basic Regression Suite Keywords.robot
 
 *** Test Cases ***
 
